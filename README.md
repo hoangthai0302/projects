@@ -1,3 +1,3 @@
 # projects
 
-my working projects
+my working projects.
