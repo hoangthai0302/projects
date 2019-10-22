@@ -1,25 +1,22 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+    "manifest_version": 2,
+    "name": "Hacker Tab",
+    "author": "Hu Chen",
+    "version": "1.7.0",
+    "description": "Replace browser new tab screen with GitHub trending projects.",
+    "icons": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
     },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+    "chrome_url_overrides": {
+      "newtab": "index.html"
     },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "permissions": ["storage", "alarms"],
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+  }
+  
