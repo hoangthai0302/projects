@@ -11,7 +11,17 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "npm-run-all build:*",
+    "build:app": "INLINE_RUNTIME_CHUNK=false react-app-rewired build",
+    "build:bg": "webpack --mode production ./src/background.js --output ./build/background.js",
+    "build:bg:dev": "webpack --mode development ./src/background.js --output ./build/background.js",
+    "prezip": "rimraf *.zip",
+    "zip": "npm-run-all zip:*",
+    "zip:build": "cd build; zip -r ../build.zip * -x '*.DS_Store'",
+    "zip:src": "zip -r src.zip src package.json README.md public -x '*.DS_Store'",
+    "prebuild-storybook": "rimraf storybook-static",
+    "build-storybook": "build-storybook",
+    "release": "npm-run-all build zip",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -34,6 +44,7 @@
     "@babel/plugin-proposal-decorators": "^7.6.0",
     "customize-cra": "^0.8.0",
     "npm-run-all": "^4.1.5",
-    "react-app-rewired": "^2.1.3"
+    "react-app-rewired": "^2.1.3",
+    "webpack-cli": "^3.3.9"
   }
 }

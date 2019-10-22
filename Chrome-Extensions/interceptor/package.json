@@ -1,0 +1,141 @@
+{
+  "name": "interceptor",
+  "version": "0.3.1",
+  "description": "A browser extension that mocks AJAX request at the browser level so you can run frontend without really starting a backend server.",
+  "license": "MIT",
+  "homepage": "https://github.com/code-mancers/interceptor#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-mancers/interceptor.git"
+  },
+  "keywords": [
+    "interceptor",
+    "mock-ajax-frontend",
+    "mock-xhr-frontend",
+    "chrome",
+    "firefox-extension"
+  ],
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/travis-cli": "^8.2.0",
+    "@types/chrome": "^0.0.88",
+    "@types/classnames": "^2.2.3",
+    "@types/clean-webpack-plugin": "^0.1.2",
+    "@types/enzyme": "^3.1.10",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/fork-ts-checker-webpack-plugin": "^0.4.0",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-redux": "^7.1.2",
+    "@types/react-table": "^6.7.11",
+    "@types/redux-logger": "^3.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-adapter-react-helper": "^1.2.3",
+    "fork-ts-checker-webpack-plugin": "^1.5.0",
+    "gulp": "^4.0.2",
+    "gulp-conventional-changelog": "^2.0.1",
+    "gulp-git": "^2.8.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-zip": "^5.0.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "react-hot-loader": "^4.12.13",
+    "redux-logger": "^3.0.6",
+    "run-sequence": "^2.2.1",
+    "sign-addon": "^0.3.1",
+    "source-map-loader": "^0.2.1",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^6.1.0",
+    "tslint": "^5.20.0",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "engines": {
+    "node": ">=10.15.1",
+    "npm": ">=6.11.2"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "globals": {
+      "__DEV__": true,
+      "__RCTProfileIsProfiling": false,
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      "\\.(ts|tsx|js|jsx)$": "ts-jest"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/app/__tests__/setup.ts"
+    ],
+    "testRegex": "/__tests__/.*\\.test\\.(jsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testURL": "http://localhost/"
+  },
+  "scripts": {
+    "build": "webpack -p --config webpack.config.prod.js",
+    "watch": "webpack --config webpack.config.dev.js --watch --progress --colors",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -u -s",
+    "fx": "web-ext run -s dist",
+    "release": "gulp release"
+  },
+  "lint-staged": {
+    "./app/*.{js,jsx,ts,tsx}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "classnames": "^2.2.5",
+    "match-sorter": "^4.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
+    "react-simple-contenteditable": "^0.0.5",
+    "react-table": "^6.8.6",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.2.0",
+    "uuid": "^3.2.1",
+    "webext-redux": "^2.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  }
+}
