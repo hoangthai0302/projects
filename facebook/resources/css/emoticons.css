@@ -1,0 +1,67 @@
+.emoticons {
+	background-image:url('../images/icons/emoticons.png');
+	background-size: auto auto;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	vertical-align: bottom;
+}
+.emo-frown {
+	background-position: 0px -120px;
+}
+.emo-smile{
+	background-position: 0px -341px;
+}
+.emo-angel{
+	background-position: 0px -17px;
+}
+.emo-colonthree{
+	background-position: 0px -35px;
+}
+.emo-devil{
+	background-position: 0px -102px;
+}
+.emo-heart{
+	background-position: 0px -206px;
+}
+.emo-pacman{
+	background-position: 0px -256px;
+}
+.emo-sunglasses{
+	background-position: 0px -375px;
+}
+.emo-tongue{
+	background-position: 0px -392px;
+}
+.emo-upset{
+	background-position: 0px -426px;
+}
+.emo-cry{
+	background-position: 0px -86px;
+}
+.emo-confuse{
+	background-position: 0px -52px;
+}
+.emo-grin{
+	background-position: 0px -171px;
+}
+.emo-kiki{
+	background-position: 0px -222px;
+}
+.emo-squint{
+	background-position: 0px -358px;
+}
+.emo-unsure{
+	background-position: 0px -409px;
+}
+.emo-wink{
+	
+}
+.emo-like {
+	background-position: 0px -0px;
+	
+}
+
+
+

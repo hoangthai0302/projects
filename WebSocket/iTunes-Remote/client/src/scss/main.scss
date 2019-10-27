@@ -1,0 +1,34 @@
+@import './variables.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $prim-color;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    width: 100%;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    max-width: 580px;
+    max-height: 768px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+@import 'components/controls.scss';
+@import 'components/display.scss';
+@import 'components/sidebar.scss';
+@import 'components/overlay.scss';
