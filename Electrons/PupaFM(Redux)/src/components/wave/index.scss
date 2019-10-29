@@ -1,0 +1,76 @@
+@keyframes wave1 {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(10px)
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    transform: translateY(10px)
+  }
+  50% {
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(10px)
+  }
+}
+
+@keyframes wave3 {
+  0% {
+    transform: translateY(10px)
+  }
+  50% {
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(10px)
+  }
+}
+
+@keyframes wave4 {
+  0% {
+    transform: translateY(10px)
+  }
+  50% {
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(10px)
+  }
+}
+
+.icon-playing-bar1 {
+  animation-duration: 2s;
+  animation-name: wave1
+}
+
+.icon-playing-bar1, .icon-playing-bar2 {
+  animation-iteration-count: infinite
+}
+
+.icon-playing-bar2 {
+  animation-duration: 1.4s;
+  animation-name: wave2
+}
+
+.icon-playing-bar3 {
+  animation-duration: 1.8s;
+  animation-name: wave3
+}
+
+.icon-playing-bar3,
+.icon-playing-bar4 {
+  animation-iteration-count: infinite
+}
+
+.icon-playing-bar4 {
+  animation-duration: 1s;
+  animation-name: wave4
+}

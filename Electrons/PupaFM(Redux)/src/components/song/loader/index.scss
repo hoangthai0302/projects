@@ -1,0 +1,42 @@
+
+@keyframes toggleOpacity {
+  0% { opacity: 1 }
+  40% { opacity: .7 }
+  75% { opacity: .9 }
+  to { opacity: 1 }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) }
+  to { transform: rotate(1turn) }
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  display: block;
+  z-index: 10;
+
+  &.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+  }
+
+  div {
+    height: 100%;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid transparent;
+    animation: rotate cubic-bezier(.2, 0, .58, 1) 4s infinite, toggleOpacity linear 1s infinite;
+    border-top-color: rgba(0,0,0,.7);
+    border-bottom-color: rgba(0,0,0,.6);
+    box-sizing: border-box;
+
+    &:hover {
+    	animation-play-state: paused;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+
+.titles {
+  margin-bottom: 16px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .title a {
+    color: #000;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .subtitle {
+    margin-top: 4px;
+    a {
+      color: #4a4a4a;
+    }
+  }
+
+  .fr {
+    float: right;
+    font-size: 11px;
+    color: #b9b9b9;
+    line-height: 20px;
+    vertical-align: top;
+
+    .time {
+      color: #b9b9b9;
+      vertical-align: middle;
+    }
+    .iconfont {
+      margin-left: 4px;
+    }
+
+  }
+
+}

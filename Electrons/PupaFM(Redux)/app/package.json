@@ -1,0 +1,9 @@
+{
+  "name": "PupaFM",
+  "productName": "PupaFM",
+  "version": "1.2.2",
+  "description": "douban.fm Music Desktop Player",
+  "main": "./main.js",
+  "author": "xwartz <stddup@gmail.com>",
+  "license": "MIT"
+}

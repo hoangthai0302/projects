@@ -1,0 +1,54 @@
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+  list-style: none;
+}
+
+body {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+
+* {
+	font-family: -apple-system,SF UI Display,Helvetica Neue,Helvetica,Lucida Grande,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+}
+
+.clearfix {
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+.hide {
+	display: none;
+}
+
+a {
+	color: #7c7b82;
+	text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.4);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.05);
+}

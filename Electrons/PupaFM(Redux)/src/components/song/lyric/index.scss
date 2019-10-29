@@ -1,0 +1,65 @@
+.playing-lyric {
+  position: absolute;
+  height: 312px;
+  top: 50%;
+  margin-top: -80px;
+  width: 230px;
+  left: 474px;
+  background: hsla(0,0%,100%,.95);
+
+  .lyric {
+  	position: relative;
+    overflow-y: auto;
+    color: #4a4a4a;
+    text-align: left;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 13px;
+    height: 262px;
+
+    p {
+      color: #4a4a4a;
+      margin: 0;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 28px;
+      min-height: 1em;
+      -webkit-user-select: text;
+      user-select: text;
+      cursor: text;
+
+      &.on {
+      	color: #45a156;
+      }
+    }
+  }
+
+  .ps-container {
+    position: relative;
+    // overflow: hidden!important;
+    height: 100%;
+  }
+
+  .lyric-toolbar {
+    margin-top: 20px;
+
+    a {
+      font-size: 12px;
+      color: #b9b9b9;
+      line-height: 12px;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+  }
+
+  .no-lyric {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    margin: auto;
+    color: #b9b9b9;
+    text-align: center;
+    width: 206px;
+  }
+}
+
