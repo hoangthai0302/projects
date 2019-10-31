@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 import viewReducer from './views/reducer';
@@ -13,10 +13,16 @@ const rootReducer = combineReducers({
    navState: navReducer,
 });
 
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+// const store = createStore(
+//   reducers,
+//   composeEnhancer(applyMiddleware(thunk)),
+// );
+
 const store = createStore(
    rootReducer,
-   devToolsEnhancer(),
-   applyMiddleware(thunkMiddleware),
+   composeEnhancer(applyMiddleware(thunkMiddleware)),
 );
 
 export default store;
