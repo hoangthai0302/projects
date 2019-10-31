@@ -1,0 +1,32 @@
+@keyframes scale {
+	0% {
+         transform: scale(0);
+         opacity: 0;
+      }
+}
+
+@keyframes fadeOut {
+	100% {
+         opacity: 0;
+    }
+}
+@keyframes slideInFromBottom {
+	0% {
+        transform: translateY(100vh);
+    }
+}
+@keyframes slideOutToBottom {
+	100% {
+        transform: translateY(100vh);
+    }
+}
+
+.heart {
+	display: inline-block;
+	font-size: 150px;
+    color: #e00;
+    &.scale {
+        animation: scale .3s ease;
+        // transform-origin: center;
+    }
+}
