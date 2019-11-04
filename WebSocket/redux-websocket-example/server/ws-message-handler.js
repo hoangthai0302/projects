@@ -1,4 +1,5 @@
 const _ = require("lodash");
+const { get, includes } = _;
 const { v4: uuid } = require("uuid");
 const WebSocket = require("ws");
 
@@ -31,7 +32,7 @@ const addMetadata = ({ type, payload }) => ({
 const broadcast = ({ wss, message, excludeUserIds = [] }) => {
   return wss.clients.forEach((ws) => {
     if (
-      !_.includes(excludeUserIds, _.get(ws, "req.session.user")) &&
+      !includes(excludeUserIds, get(ws, "req.session.user")) &&
       ws.readyState === WebSocket.OPEN
     ) {
       ws.send(JSON.stringify(message));
@@ -54,7 +55,7 @@ const sendSystemMessage = ({ wss, message, excludeUserIds = [] }) =>
 const disconnectedUsers = {};
 
 const onDisconnect = ({ wss, ws }) => {
-  const user = _.get(ws, "req.session.user");
+  const user = get(ws, "req.session.user");
   if (!user) {
     return;
   }
@@ -82,7 +83,7 @@ const onUsersRequested = ({ wss, ws }) => {
       .filter(
         (wsClient) =>
           ws.readyState === WebSocket.OPEN &&
-          _.get(wsClient, "req.session.user"),
+          get(wsClient, "req.session.user"),
       )
       .map((wsClient) => wsClient.req.session.user) || [];
 
@@ -147,7 +148,7 @@ const onJoinRequested = ({ wss, ws, payload: { id = uuid(), name } = {} }) => {
 };
 
 const onMessageAdded = ({ wss, ws, payload: { message } }) => {
-  const user = _.get(ws, "req.session.user");
+  const user = get(ws, "req.session.user");
 
   return broadcast({
     wss,
@@ -163,7 +164,7 @@ const onMessageAdded = ({ wss, ws, payload: { message } }) => {
 };
 
 const onUserStartedTyping = ({ wss, ws }) => {
-  const user = _.get(ws, "req.session.user");
+  const user = get(ws, "req.session.user");
 
   return broadcast({
     wss,
@@ -179,7 +180,7 @@ const onUserStartedTyping = ({ wss, ws }) => {
 };
 
 const onUserStoppedTyping = ({ wss, ws }) => {
-  const user = _.get(ws, "req.session.user");
+  const user = get(ws, "req.session.user");
 
   return broadcast({
     wss,
@@ -216,7 +217,7 @@ const wsMessageHandler = ({ wss, ws }) => {
 };
 
 const checkHandleReconnect = ({ wss, ws }) => {
-  const user = _.get(ws, "req.session.user");
+  const user = get(ws, "req.session.user");
 
   if (user) {
     handleReconnect({ wss, ws, user });

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="js/lib/codemirror.css"></link>
+    <link rel="stylesheet" href="js/lib/normalize.css"></link>
+    <link rel="stylesheet" href="js/theme/testtheme.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/chrome-tabs.css">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="js/addon/scroll/simplescrollbars.css">
+  	<link rel="stylesheet" type="text/css" href="js/addon/hint/show-hint.css">
+  	<link rel="stylesheet" type="text/css" href="js/addon/dialog/dialog.css">
+  	<link rel="stylesheet" type="text/css" href="js/addon/search/matchesonscrollbar.css">
+
+  	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  			crossorigin="anonymous"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  	
+
+  	<script src="js/lib/codemirror.js"></script>
+	<script src="js/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="js/mode/jsx/jsx.js"></script>
+    <script src="js/mode/css/css.js"></script>
+    <script src="js/mode/xml/xml.js"></script>
+    <script src="js/addon/scroll/simplescrollbars.js"></script>
+    <script src="js/addon/scroll/annotatescrollbar.js"></script>
+    <script src="js/addon/search/matchesonscrollbar.js"></script>
+    <script src="js/addon/dialog/dialog.js"></script>
+    <script src="js/addon/search/searchcursor.js"></script>
+    <script src="js/addon/search/search.js"></script>
+    <script src="js/addon/search/match-highlighter.js"></script>
+    <script src="js/addon/hint/show-hint.js"></script>
+    <script src="js/addon/hint/anyword-hint.js"></script>
+    <script src="js/addon/edit/closebrackets.js"></script>
+    <script src="js/keymap/sublime.js"></script>
+    <script src="js/mode/javascript/javascript.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/medium-draft.css">
+    <link rel="stylesheet" type="text/css" href="http://samypesse.github.io/draft-js-code/prism.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="http://samypesse.github.io/draft-js-code/editor.css">
+
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+</head>
+<body>
+	<div id="tabbar">
+          <a href="#" class="tablinks active" data-tabname="explorer" onclick="openTab('#explorer')"  id="defaultOpen">Explorer</a>
+          <a href="#" class="tablinks" data-tabname="workspace" onclick="openTab('#workspace')">Workspace</a>
+          <a href="#" class="tablinks" data-tabname="notes" onclick="openTab('#notes')">Notes</a>
+          <a href="#" class="tablinks" data-tabname="tryit" onclick="openTab('#tryit')">Try it!</a>
+          <a href="#" class="tablinks" data-tabname="nodeConsole" onclick="openTab('#nodeConsole')">Node Console</a>
+          <a href="#" class="tablinks" data-tabname="jsonViewer" onclick="openTab('#jsonViewer')">JSON</a>
+          <a href="#" class="tablinks" data-tabname="chat" onclick="openTab('#chat')">Chat</a>
+    </div>
+	<div id="body">
+		<div id="explorer" class='tabcontent'>
+
+	        <div id="sidebar-explorer"></div>
+	        <div id="sidebar-resizer" class="resizer"></div>
+	        
+	        <div style="flex-flow: column ; justify-content: flex-start; align-items: stretch; display: flex; width: 100%;">
+                <div id="tree-folder"></div>
+                <div class="status-bar">Menu Go here</div>
+            </div>
+	    </div>
+	    <div id="workspace" class="tabcontent inactive">
+            <div id="tree-workspace">asdf asdf asd</div>
+            <div id="workspace-resizer" class="resizer"></div>
+            <div id="editorWrap">
+                <div id="editorTabs" class="chrome-tabs-shell">
+                  	<div class="chrome-tabs"></div>
+                	<div class="chrome-shell-bottom-bar"></div>
+                </div>
+                <div id="editor">
+                	
+
+                </div>
+           	</div>
+              
+        </div>
+        <div id="notes" style="flex:1 1 auto" class="tabcontent inactive">
+            <div id="tree-notes" style="flex:0 0 auto">asdf asdf</div>
+            <div id="note-resizer" class = 'resizer'></div>
+            <div style="flex-flow: column ; justify-content: flex-start; align-items: stretch; display: flex; width: 100%;">
+                    
+                <div id="draftEditor" class="editable" style="flex: 1 1 auto;"></div>
+                <div class="status-bar">Menu Go here</div>
+            </div>
+          
+          
+        </div>
+		
+	</div>
+	<script src="js/chrome-tabs.js"></script>
+	<script type="text/javascript" src="dist/bundle.js"></script>
+
+</body>
+</html>

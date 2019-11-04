@@ -1,0 +1,32 @@
+.cm-s-testtheme {
+	background: #FFFFFF;
+	color: #000000;
+}
+.cm-s-testtheme .CodeMirror-activeline-background {
+	background: #00000012;
+}
+.cm-s-testtheme .CodeMirror-selected {
+	background: #9DA7C3;
+}
+.cm-s-testtheme .cm-comment {
+	color: #008000;
+}
+.cm-s-testtheme .cm-keyword {
+	color: #0000FF;
+}
+.cm-s-testtheme .cm-number {
+	color: orange;
+}
+.cm-s-testtheme .cm-atom {
+	color: #000000;
+}
+.cm-s-testtheme .cm-string {
+	color: #A600FF;
+}
+.cm-s-testtheme .cm-property {
+	color: #000000;
+}
+
+.cm-s-testtheme .cm-tag {color: #0000FF;}
+.cm-s-testtheme .cm-attribute {color: #FF0000;}
+.cm-s-testtheme .cm-atom {color: #0000FF;}
