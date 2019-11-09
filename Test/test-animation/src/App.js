@@ -3,12 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 import animation from './animation';
 import styled from 'styled-components';
+import './config';
+import a from './a';
 
 function App() {
+
+	const age = a.age;
 	return (
 		<div className="App">
 			<Heart className="scale">&#x2665;</Heart>
 			<JsLogo src="images/logo_js.svg" />
+			<h1>{a.name} is {a.age} years old</h1>
 		</div>
 	);
 }

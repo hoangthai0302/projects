@@ -1,15 +1,19 @@
 {
-  "name": "base-react-mobx",
+  "name": "caro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
+    "http": "^0.0.0",
     "mobx": "^5.15.0",
     "mobx-react": "^6.1.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -33,8 +37,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.7.0",
     "customize-cra": "^0.8.0",
-    "react-app-rewired": "^2.1.3",
-    "@babel/plugin-proposal-decorators": "^7.6.0"
+    "react-app-rewired": "^2.1.5"
   }
 }
