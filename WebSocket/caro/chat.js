@@ -1,7 +1,7 @@
 module.exports = (io, socket, onlineUsers, channels) => {
 
     //khi vua ket noi, tra ve danh sach room
-    socket.emit('get_list_channels', ['HVN_Workplace', 'PVS']);
+    socket.emit('get_room_list', ['HVN_Workplace', 'PVS']);
     socket.on('new user', (username) => {
         onlineUsers[username] = socket.id;
         socket["username"] = username;

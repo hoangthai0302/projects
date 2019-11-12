@@ -15,7 +15,7 @@ class App extends React.Component {
 			console.log(socket.id); // 'G5p5...'
 		  });
 
-		socket.on('get_list_channels', data => {
+		socket.on('get_room_list', data => {
 			console.log(data);
 		})
 		socket.on('error', function (err) {
