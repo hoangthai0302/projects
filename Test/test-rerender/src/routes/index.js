@@ -1,17 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Home from 'components/Home';
-import RenderArrayTest from 'components/RenderArrayTest';
 
 const routes = [
     {
-        path: '/home',
+        path: '/',
         component: Home
-    },
-    {
-        path: '/render-array',
-        component: RenderArrayTest
-    },
+    }
     // {
     //     path: '/login',
     //     component : Login

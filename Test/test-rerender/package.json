@@ -6,12 +6,10 @@
     "classnames": "^2.2.6",
     "mobx": "^5.15.0",
     "mobx-react": "^6.1.4",
-    "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "styled-components": "^4.4.1"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -35,8 +33,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.6.0",
     "customize-cra": "^0.8.0",
-    "react-app-rewired": "^2.1.3"
+    "react-app-rewired": "^2.1.3",
+    "@babel/plugin-proposal-decorators": "^7.6.0"
   }
 }

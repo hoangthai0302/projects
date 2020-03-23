@@ -1,0 +1,80 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3dg947') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3dg947') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3dg947##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="pme-icon--"], [class*=" pme-icon--"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pme-icon--message {
+  &:before {
+    content: $pme-icon--message;     
+    color: #565656;
+  }
+}
+.pme-icon--calendar {
+  &:before {
+    content: $pme-icon--calendar; 
+  }
+}
+.pme-icon--draft {
+  &:before {
+    content: $pme-icon--draft; 
+  }
+}
+.pme-icon--edit {
+  &:before {
+    content: $pme-icon--edit; 
+  }
+}
+.pme-icon--goal {
+  &:before {
+    content: $pme-icon--goal; 
+  }
+}
+.pme-icon--link {
+  &:before {
+    content: $pme-icon--link; 
+  }
+}
+.pme-icon--pending {
+  &:before {
+    content: $pme-icon--pending; 
+  }
+}
+.pme-icon--project {
+  &:before {
+    content: $pme-icon--project; 
+  }
+}
+.pme-icon--recyclebin {
+  &:before {
+    content: $pme-icon--recyclebin; 
+  }
+}
+.pme-icon--review {
+  &:before {
+    content: $pme-icon--review; 
+  }
+}
+
